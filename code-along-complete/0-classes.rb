@@ -17,16 +17,19 @@ puts bens_favorite_food.upcase
 puts brians_favorite_food.upcase
 
 # Our own class
-class Dog
+class Dog < Hash
 
   def speak
-    puts "Woof!"
+    "woof"
   end
 
 end
 
 jenkins = Dog.new
-jenkins.speak
+jenkins["name"] = "Jenkins"
+puts jenkins.class
+puts jenkins.speak
+puts jenkins["name"]
 
 # A lot of powerful programming we can do with this concept,
 # but we only really care about it for 1 reason.
